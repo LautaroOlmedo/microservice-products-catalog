@@ -149,7 +149,7 @@ Request Body:
 "stock": 10
 }
 * Success Response:
-Código: 201 Created
+201 Created
 
 * Response Code Errors:
 400	Bad Request
@@ -187,7 +187,7 @@ Code: 204 Not Content
 
   
 
-6. *Next Iterations & Discution Points:*
+5. *Next Iterations & Discution Points:*
 
 *Decouple services:* Service responsibilities can be separated by implementing REST or gRPC flames applying patterns such as Circuit Breaker
 
@@ -199,4 +199,5 @@ the microservice's performance, including CPU usage, RAM, and request per second
 
 *Author:*
 Lautaro Olmedo
+LinkedIn: https://www.linkedin.com/in/lautaro-olmedo-648854224/
 
