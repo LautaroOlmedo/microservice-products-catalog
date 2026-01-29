@@ -22,7 +22,7 @@ func main() {
 	routes.SetupProductRoutes(mux, dep)
 	routes.SetupOrderRoutes(mux, dep)
 
-	const port = ":8080"
+	const port = ":8000"
 	fmt.Printf("Starting server at port %s\n", port)
 
 	server := &http.Server{

@@ -26,8 +26,8 @@ type Config struct {
 
 func LoadConfig() Config {
 	return Config{
-		Port:   getEnv("PORT", ":8080"),
-		Domain: getEnv("DOMAIN", "http://localhost:8080"),
+		Port:   getEnv("PORT", ":8000"),
+		Domain: getEnv("DOMAIN", "http://localhost:8000"),
 		JWT: JWT{
 			Secret: getEnv("JWT_SECRET", "secret"),
 		},
