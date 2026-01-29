@@ -45,6 +45,12 @@ all the available test start automatically
 
 if you want create a migration run: goose create <migration_name> sql
 
+**ci-cd:**
+
+   1.1 Upload the image to Docker Hub or GHCR
+
+   1.2 SSH to the server and execute  docker pull and docker run
+   
 # Architecture
 
 This microservice follows a Hexagonal Architecture (also known as Ports and Adapters) to ensure a clear separation of concerns and make the application independent of external services.
