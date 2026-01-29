@@ -11,6 +11,6 @@ func (s *Service) GetProducts(ctx context.Context, limit int) ([]domain.Product,
 	if err != nil {
 		return []domain.Product{}, fmt.Errorf("error fetching products: %w", err)
 	}
-	// TODO [technical debate] throw a goroutine for cache products
+	// TODO [technical debate] throw a go routine to cache the products with ttl
 	return products, nil
 }

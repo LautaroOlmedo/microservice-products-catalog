@@ -6,7 +6,6 @@ import (
 )
 
 var ErrProductNotFound = errors.New("product not found")
-var ErrInvalidProductID = errors.New("invalid product id")
 var ErrInsufficientStock = errors.New("insufficient stock")
 
 type Product struct {

@@ -1,12 +1,10 @@
-// internal/infrastructure/security/jwt/generator.go
 package jwt
 
 import (
 	"context"
-	"time"
-
 	jwtlib "github.com/golang-jwt/jwt/v5"
 	"microservice-products-catalog/cmd/http/auth"
+	"time"
 )
 
 type JWTGenerator struct {
