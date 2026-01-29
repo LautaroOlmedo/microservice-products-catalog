@@ -1,26 +1,44 @@
-***Mirocservice-productscatalog***
+# Mirocservice-products-catalog
 
-This document outlines the system design for a scalable
+# This document outlines the system design for a scalable system of purchase products
 
+**Version:** 1.0.0
 
-**Prerequisites**
+# Prerequisites
 * Docker
 * Go
+* Make (optional, for run commands)
 
+**Technology Stack:** Go 1.25.5 Standard Library, jwt/v5 v5.3.0, golang/mock v1.6.0, google/uuid v1.6.0, stretchr/testify v1.11.1, gorm.io/gorm v1.31.1
 **How to test?**
 
 Run application 
 
-1. if you want to create a mysql database for test run docker-compo
+1. if you want to use a mysql external database can run: 
+   1.1 docker build -t products-catalog-api:1.0.0 .
+   1.2 docker run \
+     -e PORT=:8080 \
+     -e JWT_SECRET=supersecret \
+     -e MY_SQL_HOST=mysql \
+     -e MY_SQL_USER=root \
+     -e MY_SQL_PASSWORD=pass \
+     products-catalog-api:1.0.0
 
+2. if you want to create the database with the service using default values run:
+   2.1 docker-compose up -d
+   2.2 make run
 
-*Architecture*
+Done, the service is ready!!
+
+# Architecture
 
 This microservice follows a Hexagonal Architecture (also known as Ports and Adapters) to ensure a clear separation of concerns and make the application independent of external services.
-Domain Layer: This layer contains the core business logic and entities.
 
-Application Layer (Services): This layer contains the use cases and interfaces that define the input and output ports of the system.
-Infrastructure Layer: This layer holds the implementations of the output ports, such as the Product and Order repository. This is also where you would add implementations for message queues, middlewares, and other external integrations.
+**Domain Layer:** This layer contains the core business logic and entities.
+
+**Application Layer (Services):** This layer contains the use cases and interfaces that define the input and output ports of the system.
+
+**Infrastructure Layer:** This layer holds the implementations of the output ports, such as the Product and Order repository. This is also where you would add implementations for message queues, middlewares, and other external integrations.
 
 
 1. *Business Logic*
