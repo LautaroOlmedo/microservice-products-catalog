@@ -2,6 +2,7 @@
 
 This document outlines the system design for a scalable
 
+
 **Prerequisites**
 * Docker
 * Go
@@ -13,28 +14,13 @@ Run application
 1. if you want to create a mysql database for test run docker-compo
 
 
-**Calling endpoints**
+*Architecture*
 
+This microservice follows a Hexagonal Architecture (also known as Ports and Adapters) to ensure a clear separation of concerns and make the application independent of external services.
+Domain Layer: This layer contains the core business logic and entities.
 
-*Product*
-
-Get Products
-
-Get Product By ID
-
-Create Product
-
-Update Product
-
-Delete Product
-
-
-*Order*
-
-Get Orders
-
-Create Order
-
+Application Layer (Services): This layer contains the use cases and interfaces that define the input and output ports of the system.
+Infrastructure Layer: This layer holds the implementations of the output ports, such as the Product and Order repository. This is also where you would add implementations for message queues, middlewares, and other external integrations.
 
 
 1. *Business Logic*
@@ -48,15 +34,12 @@ How is a test case only contemplates the purchase of a product by order (subject
    * Create Order: Users can simulate a purchase of a product. Specifying the amount they want and viewing the total money in the order
    * Get Order: Users can view all the orders generated previously 
 
-   
-
 2.1 *Functional Requirements*
 
    * Product CRUD: Users can CREATE, UPDATE, DELETE AND FETCH products.
    * Create Order: Users can generate purchase orders.
    * Get Orders: Users can view a timeline displaying orders.
    * Authentication Assumption: All users are considered valid. There is no need to implement a sign-in module or session management.
-
 
 2.2 *Non-Functional Requirements*
 
@@ -90,11 +73,15 @@ How is a test case only contemplates the purchase of a product by order (subject
 4. *API Endpoint Design*
 
 *GET*
+
 /api/products
+
 Request:
 GET /api/products?limit=10
+
 Success Response:
-Code: 200 OK
+Code: 200 
+
 Content:
 [
 {
