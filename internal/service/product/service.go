@@ -14,7 +14,7 @@ type StorageRepository interface {
 	SaveProduct(ctx context.Context, product *domain.Product) error
 }
 
-//go:generate mockgen -source=service.go -destination=././mocks/transaction_manager_mock.go -package=mocks
+//go:generate mockgen -source=service.go -destination=././mocks/product_repository_mock.go -package=mocks
 
 type TransactionManager interface {
 	WithTransaction(ctx context.Context, fn func(ctx context.Context) error) error

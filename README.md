@@ -42,6 +42,9 @@ run: make test
 
 all the available test start automatically
 
+
+if you want create a migration run: goose create <migration_name> sql
+
 # Architecture
 
 This microservice follows a Hexagonal Architecture (also known as Ports and Adapters) to ensure a clear separation of concerns and make the application independent of external services.
