@@ -123,17 +123,15 @@ Código: 201 Created
 500	Internal Server Error
 
 
-
 *DELETE* 
 /api/products/:id
 
-* Request:
-
 * Success Response:
-Código: 204 No Content
+204 No Content
+* 
 * Response Code Errors:
-404	Not Found: Producto no encontrado
-500	Internal Server Error: Error al eliminar producto
+404	Not Found
+500	Internal Server Error
 
 
 *PUT*
@@ -145,15 +143,10 @@ Código: 204 No Content
 "price": 15.50,
 "stock": 40
 }
+* 
 * Success Response:
 Code: 204 Not Content
-{
-"id": "f4691a93-f2c0-4480-8172-39f5a9b0105e",
-"name": "Gopher Pro",
-"price": 15.50,
-"stock": 40,
-"created_at": "2023-09-24T15:30:00Z"
-}
+
 * Response Code Errors:
 400	Bad Request
 404	Not Found
