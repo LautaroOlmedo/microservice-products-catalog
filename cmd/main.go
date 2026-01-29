@@ -19,7 +19,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	// Register your routes
-	routes.SetupProductRoutes(mux, dep) // Assuming you have a function to set up read routes
+	routes.SetupProductRoutes(mux, dep)
 	routes.SetupOrderRoutes(mux, dep)
 
 	const port = ":8080"
