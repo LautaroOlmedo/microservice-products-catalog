@@ -10,9 +10,10 @@
 * Make (optional, for run commands)
 
 **Technology Stack:** Go 1.25.5 Standard Library, jwt/v5 v5.3.0, golang/mock v1.6.0, google/uuid v1.6.0, stretchr/testify v1.11.1, gorm.io/gorm v1.31.1
-**How to test?**
 
-Run application 
+
+
+**Run application** 
 
 1. if you want to use a mysql external database can run: 
    1.1 docker build -t products-catalog-api:1.0.0 .
@@ -24,6 +25,8 @@ Run application
      -e MY_SQL_PASSWORD=pass \
      products-catalog-api:1.0.0
 
+
+
 2. if you want to create the database with the service using default values run:
 
    2.1 docker-compose up -d
@@ -31,6 +34,13 @@ Run application
    2.2 make run
 
 Done, the service is ready!!
+
+
+**How to test?**
+
+run: make test
+
+all the available test start automatically
 
 # Architecture
 
