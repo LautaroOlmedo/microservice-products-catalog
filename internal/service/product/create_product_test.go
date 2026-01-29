@@ -21,7 +21,6 @@ func TestCreate(t *testing.T) {
 		Stock:       50,
 	}
 
-	// Define a reusable database error
 	dbError := errors.New("database constraint violation: product already exists")
 
 	type testCase struct {
