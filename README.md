@@ -25,7 +25,9 @@ Run application
      products-catalog-api:1.0.0
 
 2. if you want to create the database with the service using default values run:
+3. 
    2.1 docker-compose up -d
+4. 
    2.2 make run
 
 Done, the service is ready!!
