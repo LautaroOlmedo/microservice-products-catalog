@@ -99,17 +99,16 @@ Content:
 "created_at": "2023-09-20T12:00:00Z"
 }
 ]
+
 Response Code Errors:
-Código	Significado
 400	Bad Request
 500	Internal Server Error
 
 
 *POST*
+
 /api/products
-Nota: Corregí el typo en tu ejemplo (Pproducts → products).
-Descripción:
-Crea un nuevo producto en el catálogo.
+
 Request Body:
 {
 "name": "Nuevo Producto",
@@ -118,15 +117,8 @@ Request Body:
 }
 * Success Response:
 Código: 201 Created
-{
-"id": "d4e5f6a7-b8c9-0123-4567-89abcdef0123",
-"name": "Nuevo Producto",
-"price": 19.99,
-"stock": 10,
-"created_at": "2026-01-29T12:00:00Z"
-}
+
 * Response Code Errors:
-Código	Significado
 400	Bad Request
 500	Internal Server Error
 
