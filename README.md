@@ -1,6 +1,6 @@
 # Mirocservice-products-catalog
 
-# This document outlines the system design for a scalable system of purchase products
+**This document outlines the system design for a scalable system of purchase products**
 
 **Version:** 1.0.0
 
